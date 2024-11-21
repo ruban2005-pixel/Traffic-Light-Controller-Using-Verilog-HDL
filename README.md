@@ -30,7 +30,7 @@ Save and Document Results:
 Capture screenshots of the waveform and save the simulation logs to include in your report.
 
 Verilog Code for Traffic Light Controller
-
+```
 module Traffic_light_controller_TB;
 reg clk,rst;
 wire[2:0]light_M1;
@@ -54,14 +54,15 @@ begin
      $finish;
      end
      endmodule
-
+```
 output: ![tra](https://github.com/user-attachments/assets/847cc892-2cc5-4f7c-84dd-ca5ef623df0a)
 
 
 Testbench for Traffic Light Controller
 
 module Traffic_light_controller_TB;
-  reg clk, rst;
+```
+reg clk, rst;
   wire [2:0] light_M1;  // Outputs for traffic light in direction M1
   wire [2:0] light_S;   // Outputs for traffic light in direction S
   wire [2:0] light_MT;  // Outputs for traffic light in direction MT
@@ -83,6 +84,7 @@ module Traffic_light_controller_TB;
     forever #(1000000000 / 2) clk = ~clk;  // Toggle clock every 0.5 seconds
   end
 
+
   // Reset sequence
   initial begin
     rst = 0;             // Start with reset low
@@ -94,6 +96,7 @@ module Traffic_light_controller_TB;
     $finish;             // End simulation
   end
 endmodule
+```
 
 output : ![traf tb](https://github.com/user-attachments/assets/b151569a-4afe-4981-b995-2af529c733d2)
 
